@@ -13,4 +13,4 @@
 Refer to `watson-stt-kit/src`
 
 ## How to use
-Refer to ''  (Japanese)
+Refer to `stt-toolkit-manual.pdf` (Writen in Japanese)
