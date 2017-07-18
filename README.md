@@ -2,7 +2,7 @@
 * This is alpha version of GUI toolkit for IBM Watson Speech to Text (STT) using Java-SDK.
 * You can customize Language Models in your own STT instance.
 * Mic and wav file recognition with Custom Languge Model.
-* Due to limitation of the size of wav file, splitting tool is prepared.
+* Due to limitation of the size of wav file, splitting tool is provided.
 
 ## Instruction
 1. Confirm that you have installed Java
