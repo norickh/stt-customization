@@ -10,7 +10,7 @@
 3. To recognize using Custom Language Model, download and run `STT-recognize_v4.2.jar`  
 
 ## Source code  
-Refer to `stt-gui-toolkit/stt`
+Refer to `stt-gui-toolkit/src/stt`
 
 ## How to use
 Refer to `stt-toolkit-manual.pdf` (Writen in Japanese)
