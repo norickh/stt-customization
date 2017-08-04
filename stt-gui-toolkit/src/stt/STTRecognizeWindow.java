@@ -137,18 +137,12 @@ public class STTRecognizeWindow {
 		frmSpeechToText.getContentPane().add(label_4);
 
 		inUsername = new JTextField();
-		inUsername.setText("0d8800cd-b182-4ecd-b586-836e97190452");
-		//higashide instnce: 0d8800cd-b182-4ecd-b586-836e97190452
-		//inahara instance: 02c7ce7c-6d76-495f-a185-35f997e7b65c
 		inUsername.setFont(new Font("Lucida Grande", Font.PLAIN, 12));
 		inUsername.setColumns(10);
 		inUsername.setBounds(115, 40, 273, 26);
 		frmSpeechToText.getContentPane().add(inUsername);
 
 		inPassword = new JPasswordField();
-		inPassword.setText("5xfSzJAxEmOW");
-		//higashide instance: 5xfSzJAxEmOW
-		//inahara instance: tjH7vaaxt34l
 		inPassword.setFont(new Font("Lucida Grande", Font.PLAIN, 12));
 		inPassword.setColumns(8);
 		inPassword.setBounds(464, 40, 116, 26);
@@ -268,16 +262,6 @@ public class STTRecognizeWindow {
 		frmSpeechToText.getContentPane().add(btnUpload);
 		btnUpload.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				/*
-				 * [KIT instance]
-				 * String endPoint = "https://stream.watson-j.jp/speech-to-text/api";
-				 * String username = "307e4ab4-a72c-443d-b876-64ff52ccca7b";
-				 * String password = "q1SzIzepUogs";
-						[Author's instance]
-						String endPoint = "https://stream.watsonplatform.net/speech-to-text/api";
-						String username = "80c55ecb-9c6e-40d9-94a2-094d705fecc3";
-						String password = "QbVVGDfTk3bW";
-				*/
 				String endPoint = (String) comboEndPoint.getSelectedItem();
 				String username = inUsername.getText();
 				String password = inPassword.getText();
@@ -292,7 +276,6 @@ public class STTRecognizeWindow {
 					return;
 				}
 				
-//				stt.RecognizeFile sttf = new RecognizeFile(username, password, endPoint);
 				SpeechToText service = null;
 				try {
 					service = new SpeechToText();
@@ -316,6 +299,7 @@ public class STTRecognizeWindow {
 								.interimResults(true) //
 								.model(model) //
 								.timestamps(true) //
+								.inactivityTimeout(-1) //
 								.customizationId(customizationId) //
 								.build();
 						System.out.println("using customization \n" + customizationId);
@@ -325,6 +309,7 @@ public class STTRecognizeWindow {
 								.interimResults(true) //
 								.model(model) //
 								.timestamps(true) //
+								.inactivityTimeout(-1) //
 								.build();	
 						System.out.println("NOT using customization" + customizationId);
 					}
@@ -342,18 +327,7 @@ public class STTRecognizeWindow {
 								textAreaRecognize.setText( outputText );
 								JScrollBar scrollBar = scrollPane.getVerticalScrollBar();
 								scrollBar.setValue(scrollBar.getMaximum());
-/*								btnStopUpload.addActionListener(new ActionListener() {
-									public void actionPerformed(ActionEvent e) {
-										System.out.println("stop upload");
-//										textAreaStatus.setText("中断されました\n");
-										try {
-											audioInputStream.close();
-										} catch (IOException e1) {
-											e1.printStackTrace();
-										}
-									}
-								});
-*/						}
+						}
 						@Override
 							public void onDisconnected(){
 							btnUpload.setEnabled(true);

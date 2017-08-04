@@ -37,7 +37,6 @@ public class STTCustomizeWindow {
 	private JTextField inName;
 	private JTextField inDescription;
 	private JPasswordField inPassword;
-//	private JTextField inEndpoint;
 	private JTextField inUsername;
 	private JTextArea outStatus;
 	private JTextField outCustomizationId;
@@ -76,11 +75,14 @@ public class STTCustomizeWindow {
 		initialize();
 	}
 	
+	/*
+	 * Set locale
+	 */
 	private void setResourceBundle(){
 		String language = "en";
         String country = "US";
 		Locale loc = new Locale(language, country);
-		loc = Locale.getDefault();      // 現在のロケール
+		loc = Locale.getDefault(); 
 	        System.out.println("Locale           = "  + loc.toString());
 	        System.out.println("Country          = "  + loc.getCountry());
 	        System.out.println("Display Country  = "  + loc.getDisplayCountry());
@@ -119,33 +121,18 @@ public class STTCustomizeWindow {
 		label_4.setBounds(400, 37, 60, 16);
 		frame.getContentPane().add(label_4);
 
-		/*inEndpoint = new JTextField();
-		inEndpoint.setFont(new Font("Lucida Grande", Font.PLAIN, 12));
-		inEndpoint.setText("https://stream.watsonplatform.net/speech-to-text/api");
-		inEndpoint.setColumns(10);
-		inEndpoint.setBounds(110, 5, 488, 26);
-		frame.getContentPane().add(inEndpoint);*/
-
 		JComboBox comboEndPoint = new JComboBox();
 		comboEndPoint.setModel(new DefaultComboBoxModel(new String[] {"https://stream.watsonplatform.net/speech-to-text/api","https://stream.watson-j.jp/speech-to-text/api"}));
 		comboEndPoint.setBounds(110, 5, 488, 26);
 		frame.getContentPane().add(comboEndPoint);
 
 		inUsername = new JTextField();
-		inUsername.setText("0d8800cd-b182-4ecd-b586-836e97190452");
-			//higashide instnce: 0d8800cd-b182-4ecd-b586-836e97190452
-			//inahara instance: 02c7ce7c-6d76-495f-a185-35f997e7b65c
 		inUsername.setFont(new Font("Lucida Grande", Font.PLAIN, 12));
 		inUsername.setColumns(10);
 		inUsername.setBounds(110, 34, 278, 26);
 		frame.getContentPane().add(inUsername);
-		
-
 
 		inPassword = new JPasswordField();
-		inPassword.setText("5xfSzJAxEmOW");
-			//higashide instance: 5xfSzJAxEmOW
-			//inahara instance: tjH7vaaxt34l
 		inPassword.setFont(new Font("Lucida Grande", Font.PLAIN, 12));
 		inPassword.setColumns(8);
 		inPassword.setBounds(468, 34, 130, 26);
@@ -292,7 +279,6 @@ public class STTCustomizeWindow {
 				} else {
 					outStatus.setText("カスタマイズまたはトレーニングを行う辞書をリストから選択してください。\n\n");
 				}
-
 			}
 		});
 
@@ -516,7 +502,6 @@ public class STTCustomizeWindow {
 
 
 		
-		
 
 		JScrollPane scrollPane_1 = new JScrollPane();
 		scrollPane_1.setBounds(167, 562, 505, 111);
@@ -578,17 +563,5 @@ public class STTCustomizeWindow {
 				}
 			}
 		});
-
-		/*
-		 * else{ //Display status. try{ for (int x = 0; x < 30; x++) { String
-		 * status = clmt.getTrainingStatus(inUsername.getText(),
-		 * inPassword.getText(), outCustomizationId.getText());
-		 * outTrainingStatus.setText(status);
-		 * if(status.equals("AVAILABLE")){break;}
-		 * 
-		 * } }catch(InterruptedException e1){ e1.printStackTrace();
-		 * outStatus.append(e1.getMessage()); }
-		 */
-
 	}
 }

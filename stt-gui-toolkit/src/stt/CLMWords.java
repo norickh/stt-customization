@@ -25,9 +25,8 @@ public class CLMWords {
 	}
 
 	public void setAddWords(String customId, String filepath) {
-		// Prepare words
 		try {
-			File csv = new File(filepath); // CSVデータファイル
+			File csv = new File(filepath); 
 			if (csv.isFile() == false || filepath.endsWith("csv") == false) {
 				this.status = "ファイルが無効です。csvファイルを選択してください。\n\n";
 				return;
@@ -37,23 +36,21 @@ public class CLMWords {
 			BufferedReader br2 = new BufferedReader(new InputStreamReader(new FileInputStream(csv), "UTF-8"));
 			// FileInputStream, InputStreamReaderでUTF-8指定, MS932だとwindowsで読める
 		
-			// 最終行までカウント
+			// Counting line
 			String line = "";
 			int line_count = 0;
 			while ((line = br1.readLine()) != null) {
 				line_count += 1;
 			}
 			System.out.println(line_count);
-			Word[] w = new Word[line_count]; // csv行数分だけWord型配列の箱を作成。初期値はnull
+			Word[] w = new Word[line_count]; 
 			br1.close();
 
-			// 一行ごとに
 			line = "";
 			int count = 0;
 			while ((line = br2.readLine()) != null) {
 				StringTokenizer st = new StringTokenizer(line, ",");
 
-				// 1行の各要素を文字列配列に格納
 				int i = 0;
 				List<String> ln = new ArrayList<String>();
 				while (st.hasMoreTokens()) {
