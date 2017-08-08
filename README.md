@@ -11,10 +11,11 @@
 
 ## Source code  
 Refer to `stt-gui-toolkit/src/stt`
-This is just example snippet
+This is just example snippet.
+There is no execution file.
 
 ## How to use
-Refer to `stt-toolkit-manual.pdf` (Writen in Japanese)
+Refer to `stt-toolkit-manual_v1.pdf` (Writen in Japanese)
 
 ## Update Java SDK to use the IBM Watson services
 Refer here ( https://github.com/watson-developer-cloud/java-sdk ) and replace Java-SDK in `stt-gui-toolkit/lib`.
