@@ -11,15 +11,15 @@
 
 ## Source code  
 Refer to `stt-gui-toolkit/src/stt`
-There is no execution or build file.
+There is no execution or build file.  
 
 ## How to use JAR application
 Refer to `stt-toolkit-manual_v1.pdf` (Writen in Japanese) 
 
 ## IBM Watson Speech to Text API
-API Reference: https://www.ibm.com/watson/developercloud/speech-to-text/api/v1/ 
-Documentation: https://console.bluemix.net/docs/services/speech-to-text/index.html#about 
+API Reference: https://www.ibm.com/watson/developercloud/speech-to-text/api/v1/  
+Documentation: https://console.bluemix.net/docs/services/speech-to-text/index.html#about  
 
 ## Java SDK for IBM Watson services
-Source Codes: https://github.com/watson-developer-cloud/java-sdk 
-Documentation: http://watson-developer-cloud.github.io/java-sdk/docs/java-sdk-4.0.0/ 
+Source Codes: https://github.com/watson-developer-cloud/java-sdk  
+Documentation: http://watson-developer-cloud.github.io/java-sdk/docs/java-sdk-4.0.0/  
