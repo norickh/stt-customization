@@ -100,7 +100,7 @@ public class STTCustomizeWindow {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setTitle("Speech To Text Cutomize ver.8.1");
+		frame.setTitle("Speech To Text Cutomize ver.8.2");
 		frame.getContentPane().setFont(new Font("Lucida Grande", Font.PLAIN, 11));
 		frame.setBounds(100, 100, 740, 720);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

@@ -112,7 +112,7 @@ public class STTRecognizeWindow {
 	 */
 	private void initialize() {
 		frmSpeechToText = new JFrame();
-		frmSpeechToText.setTitle("STT Recognize ver.4.1 smartformat-en-mic");
+		frmSpeechToText.setTitle("STT Recognize ver.4.3");
 		frmSpeechToText.setBounds(100, 100, 620, 580);
 		frmSpeechToText.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
@@ -295,7 +295,6 @@ public class STTRecognizeWindow {
 					
 					if(chckbxUseCustomization.isSelected() == true){
 						options = new RecognizeOptions.Builder().contentType(HttpMediaType.AUDIO_WAV) //
-								.continuous(true) //
 								.interimResults(true) //
 								.model(model) //
 								.timestamps(true) //
@@ -305,7 +304,6 @@ public class STTRecognizeWindow {
 						System.out.println("using customization \n" + customizationId);
 					} else{
 						options= new RecognizeOptions.Builder().contentType(HttpMediaType.AUDIO_WAV) //
-								.continuous(true) //
 								.interimResults(true) //
 								.model(model) //
 								.timestamps(true) //
@@ -419,7 +417,8 @@ public class STTRecognizeWindow {
 					// set recognize options 
 					RecognizeOptions options;
 					if (chckbxUseCustomization.isSelected() == true) {
-						options = new RecognizeOptions.Builder().continuous(true).interimResults(true)
+						options = new RecognizeOptions.Builder() //
+								.interimResults(true) //
 								.contentType(HttpMediaType.AUDIO_RAW + "; rate=" + sampleRate) //
 								.model(model) //
 								.timestamps(true) //
@@ -427,7 +426,8 @@ public class STTRecognizeWindow {
 								.smartFormatting(true) //
 								.build();
 					} else {
-						options = new RecognizeOptions.Builder().continuous(true).interimResults(true)
+						options = new RecognizeOptions.Builder() //
+								.interimResults(true) //
 								.contentType(HttpMediaType.AUDIO_RAW + "; rate=" + sampleRate) //
 								.model(model) //
 								.timestamps(true) //

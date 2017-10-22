@@ -33,7 +33,7 @@ public class CLMCorpora {
 			}
 			//TODO: UTF-8での読み込み			
 
-			service.addTextToCustomizationCorpus(customId, corpasName, true, txt).execute();
+			service.addCorpus(customId, corpasName, txt, true).execute();
 			this.status = "コーパスが登録されました。List Corporaで確認しましょう。\n";
 			
 		} catch (Exception e) {
