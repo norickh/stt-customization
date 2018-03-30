@@ -14,7 +14,7 @@ Refer to `stt-gui-toolkit/src/stt`
 There is no execution or build file.  
 
 ## How to use JAR application
-Refer to `stt-toolkit-manual_v1.pdf`  
+Refer to `stt-toolkit-manual-en_v1.pdf`  
 For Japanese version, read `stt-toolkit-manual-ja_v1.pdf`  
 
 ## IBM Watson Speech to Text API
