@@ -24,3 +24,6 @@ Documentation: https://console.bluemix.net/docs/services/speech-to-text/index.ht
 ## Java SDK for IBM Watson services
 Source Codes: https://github.com/watson-developer-cloud/java-sdk  
 Documentation: http://watson-developer-cloud.github.io/java-sdk/docs/java-sdk-4.0.0/  
+  
+Managed by Noriyuki Higashide  
+norickh@jp.ibm.com
